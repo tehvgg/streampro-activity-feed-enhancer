@@ -1,0 +1,7 @@
+.activity-log li.active {
+    padding: 80px 15px !important;
+}
+
+.activity-log li.active p {
+    font-size: 25px !important;
+}

@@ -1,0 +1,17 @@
+{
+  "name": "StreamPro Activity Feed Enhancer",
+  "description": "Enhance the notifications of the StreamPro activity feed.",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "homepage_url": "http://github.com/tehvgg",
+
+  "content_scripts": [{
+    "matches": [ "https://streampro.io/dashboard/realtime" ],
+    "css": [ "main.css" ],
+    "js": [ "main.js" ]
+  }],
+
+  "permissions": [ "https://streampro.io/dashboard/realtime" ],
+
+  "web_accessible_resources": [ "sound.wav" ]
+}
