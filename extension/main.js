@@ -3,7 +3,10 @@
 	'use strict';
 
 	var sound = new Audio(chrome.extension.getURL('sound.wav'));
-	sound.volume = '1.0';
+	
+	function setVolume (data) {
+		sound.volume = data.volume;
+	}
 
 	function init (target) {
 		new MutationObserver(handleMutation).observe(target, { childList: true });
@@ -22,5 +25,6 @@
 	}
 
 	var interval = setInterval(checkForElement, 100);
+	chrome.storage.sync.get({ volume: 1 }, setVolume);
 	
 })();
